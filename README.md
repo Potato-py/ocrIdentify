@@ -17,18 +17,22 @@ pip install flask
 
 - 1、**ddddOcr.py**:
 ```
-重新封装的验证码识别模块
+重新封装的验证码识别模块。
+
+（渗透项目中存在验证码并爆破密码时，推荐编写python脚本并调用该模块[不是很推荐BP插件，懂得都懂]）
 ```
 
 - 2、**ddddOcrApi.py**:
 ```
 将ddddOcr.py接口API化，支持服务器端启动
+
 （开放公网需要参数host='0.0.0.0'，具体文件内有注释）
 ```
 
 - 3、**ocrIdentifyBP.py**:
 ```
 根据ddddOcrApi.py开发的burpSuite验证码识别模块
+
 （可以自己魔改不调用API直接调用ddddOcr.py，我懒，等你pull request）
 ```
 
